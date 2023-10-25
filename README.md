@@ -155,7 +155,7 @@ In your web browser, navigate to your EC2 instance's public IP or your domain na
 
 Follow the on-screen instructions to complete the WordPress setup, including creating an admin user and providing your site's information.
 
-### Step 10: UserData Script (Optional)
+### Step 9: UserData Script (Optional)
 
 Here is a UserData script that can automate the installation process. When you launch a new EC2 instance, you can include this script to perform all the necessary steps:
 
