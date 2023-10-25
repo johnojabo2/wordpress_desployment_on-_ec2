@@ -148,50 +148,8 @@ define('DB_PASSWORD', 'your_wp_password');
 
 Save and exit the text editor.
 
-### Step 8: Configure Apache
 
-Create an Apache configuration file for your site:
-
-```bash
-sudo nano /etc/apache2/sites-available/your-site.conf
-```
-
-Add the following configuration, replacing `your-site` with your domain name (if you have one):
-
-```apache
-<VirtualHost *:80>
-    ServerAdmin webmaster@your-site
-    DocumentRoot /var/www/html
-    ServerName your-site
-    ServerAlias www.your-site
-
-    <Directory /var/www/html>
-        Options FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-```
-
-Save and exit the text editor.
-
-Enable the site and the rewrite module:
-
-```bash
-sudo a2ensite your-site.conf
-sudo a2enmod rewrite
-```
-
-Restart Apache:
-
-```bash
-sudo systemctl restart apache2
-```
-
-### Step 9: Complete WordPress Installation
+### Step 8: Complete WordPress Installation
 
 In your web browser, navigate to your EC2 instance's public IP or your domain name (if you have one). You'll see the WordPress installation page.
 
